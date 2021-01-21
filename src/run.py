@@ -66,16 +66,10 @@ print("Training agent...")
 run_agents(a1, a2, episodes=1000, train=True)
 print("Testing agent")
 run_agents(a1, a2, episodes=1000, verbose=True, train=False)
-# print(a2.state_explore_count)
-# print(a2.value_func_table)
-# print("First move : ",a2.value_func_table["0----O----"])
-# print("First move : ",a2.value_func_table["0O--------"])
-# print("First move : ",a2.value_func_table["0-O-------"])
-# print("First move : ",a2.value_func_table["0--O------"])
 
 for i in range(9):
     serial = ["0","-","-","-","-","-","-","-","-","-"]
     serial[i + 1] = "O"
     serial = "".join(serial)
-    print("First move: " + serial, a2.value_func_table[serial])
+    print("First move Valuation: " + serial, a2.value_func_table[serial])
 # print(a2.value_func_table)
